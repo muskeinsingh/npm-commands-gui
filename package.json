@@ -1,0 +1,23 @@
+{
+  "name": "npm-commands-gui",
+  "version": "1.0.0",
+  "description": "Graphical User Interface(GUI) within Command Line Interface(CLI) for NPM commands in your JavaScript repository",
+  "main": "index.js",
+  "scripts": {
+    "postinstall": "node post-install.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "npm-commands-gui": "index.js"
+  },
+  "keywords": ["npm", "scripts", "cli", "javascript"],
+  "author": "Muskein Singh",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "3.0.0",
+    "clear": "0.1.0",
+    "figlet": "1.2.4",
+    "inquirer": "7.0.1",
+    "shelljs": "0.8.3"
+  }
+}
