@@ -11,9 +11,4 @@ Please raise issues [here](https://github.com/muskeinsingh/npm-commands-gui/issu
 
 **Contributor**
 
-[Muskein Singh](https://twitter.com/muskein)
-
-**Contact**
-
-Email me at muskeinsingh93@gmail.com in case of any queries
-
+[Muskein Singh](https://twitter.com/muskein). DM @muskein in case of queries.
