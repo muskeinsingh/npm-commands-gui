@@ -1,6 +1,6 @@
 {
   "name": "npm-commands-gui",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "Graphical User Interface(GUI) within Command Line Interface(CLI) for NPM commands in your JavaScript repository",
   "main": "index.js",
   "scripts": {
