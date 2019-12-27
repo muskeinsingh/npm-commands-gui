@@ -4,8 +4,7 @@
   "description": "Graphical User Interface(GUI) within Command Line Interface(CLI) for NPM commands in your JavaScript repository",
   "main": "index.js",
   "scripts": {
-    "postinstall": "node post-install.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "postinstall": "node post-install.js"  
   },
   "bin": {
     "npm-commands-gui": "index.js"
