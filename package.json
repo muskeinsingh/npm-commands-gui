@@ -1,6 +1,6 @@
 {
   "name": "npm-commands-gui",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Graphical User Interface(GUI) within Command Line Interface(CLI) for NPM commands in your JavaScript repository",
   "main": "index.js",
   "scripts": {
@@ -12,6 +12,10 @@
   "keywords": ["npm", "scripts", "cli", "javascript"],
   "author": "Muskein Singh",
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/muskeinsingh/npm-commands-gui"
+  },
   "dependencies": {
     "chalk": "3.0.0",
     "clear": "0.1.0",
