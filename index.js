@@ -3,11 +3,13 @@ const chalk = require('chalk');
 const inquirer  = require('inquirer');
 const fs = require('fs');
 const shell = require('shelljs');
+const exitCommandName = "exit";
 (() => {
     if (fs.existsSync('package.json')) {
         const packageJsonData = fs.readFileSync('package.json');
         const scripts = JSON.parse(packageJsonData).scripts;
-        const scriptKeys = Object.keys(scripts);        
+        const scriptsWithExit = addExitCommand(scripts);      
+        const scriptKeys = Object.keys(scriptsWithExit);
         inquirer.prompt([
             {
                 type: 'list',
@@ -17,8 +19,13 @@ const shell = require('shelljs');
             },
         ])
         .then(commands => {
-            console.log(chalk.yellowBright('Running:', commands.command));
-            shell.exec('npm run ' + commands.command)
+            if(commands.command === exitCommandName) {
+                console.log(chalk.yellowBright('Exiting...'));
+                process.exit();
+            } else {
+                console.log(chalk.yellowBright('Running...:', commands.command));
+                shell.exec('npm run ' + commands.command)
+            }
         });
     } else {
         console.log(
@@ -26,3 +33,8 @@ const shell = require('shelljs');
         );
     }
 })();
+
+function addExitCommand(commands) {
+    commands[exitCommandName] = ""; // could potentially write anything in value - not being executed
+    return commands;
+}
